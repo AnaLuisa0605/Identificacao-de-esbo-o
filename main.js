@@ -28,7 +28,7 @@
    console.log(results);
    var result = results[0].label;
    document.getElementById('label').innerHTML = "Nome: " + result.replace("_", " ");
-   document.getElementById('confidence').innerHTML = 'Precisão: ' + Math.round(result.confidence * 100) + '%';
+   document.getElementById('confidence').innerHTML = 'Precisão: ' + Math.round(result[0].confidence * 100) + '%';
  
    var utterThis = new SpeechSynthesisUtterance(result.replace("_", + " "));
    synth.speak(utterThis);
